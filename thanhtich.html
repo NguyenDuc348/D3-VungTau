@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<!--Phần này thực ra sẽ còn nhiều những kỉ niệm hơn nhưng do dung lượng máy không đủ để lưu ảnh-->
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hành trình D3 - Vũng Tàu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { background: #f0fdf4; } 
+        .achieve-card { transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        .achieve-card:hover { transform: translateY(-10px); }
+        .slide-bottom {
+    object-position: center bottom;
+    object-position: center 35%; 
+}
+    </style>
+</head>
+<body class="pt-24 pb-20">
+
+    <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="main-duphong.html" class="text-2xl font-bold text-orange-600">D3 Vung Tau</a>
+            <div class="space-x-8 font-medium text-slate-700">
+                <a href="main-duphong.html" class="hover:text-orange-500 transition">Trang chủ</a>
+                <a href="thanhvien.html" class="hover:text-orange-500 transition">Thành viên</a>
+                <a href="thanhtich.html" class="text-orange-500 border-b-2 border-orange-500">Hành trình</a>
+                <a href="loinhan1.html" class="hover:text-orange-500 transition">Tâm tư</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="max-w-7xl mx-auto px-6 mb-16 text-center">
+        <h1 class="text-5xl font-extrabold text-green-900 mb-4">Dòng Thời Gian D3</h1>
+        <p class="text-green-700 text-lg italic">"Mỗi cột mốc là một mảnh ghép của thanh xuân"</p>
+    </div>
+
+
+
+    <div id="achieveGrid" class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <div class="achieve-card study relative overflow-hidden rounded-[2rem] h-[450px] shadow-2xl group" 
+             style="background: url('anh-lop-15-9.jpg') center/cover no-repeat;">
+            
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+
+            <div class="relative h-full p-8 flex flex-col justify-end text-white">
+                <span class="text-xs font-bold bg-white/20 backdrop-blur-md w-fit px-4 py-1 rounded-full mb-4 border border-white/30">15 Tháng 9, 2023</span>
+                <div class="text-green-400 text-3xl mb-3"><i class="fa-solid fa-school"></i></div>
+                <h3 class="text-2xl font-bold mb-2">Bức ảnh công bố thành lập page lớp</h3>
+                <p class="text-gray-300 text-sm leading-relaxed mb-4">Bức ảnh khởi đầu cho hành trình 3 năm ấy...</p>
+                <div class="pt-4 border-t border-white/20 flex items-center gap-2">
+                    <i class="fa-solid fa-medal text-yellow-500"></i>
+                    <p class="text-xs font-semibold text-yellow-400 uppercase tracking-widest">Tuy trông ngẫu nhiên nhưng đáng nhớ nhỉ...</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="achieve-card study relative overflow-hidden rounded-[2rem] h-[450px] shadow-2xl group" 
+             style="background: url('anh-lop-16-9.jpg') center/cover no-repeat ;">
+            
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+
+            <div class="relative h-full p-8 flex flex-col justify-end text-white">
+                <span class="text-xs font-bold bg-white/20 backdrop-blur-md w-fit px-4 py-1 rounded-full mb-4 border border-white/30">16 Tháng 9, 2023</span>
+                <div class="text-green-400 text-3xl mb-3"><i class="fa-solid fa-school"></i></div>
+                <h3 class="text-2xl font-bold mb-2">Đại hội chi đoàn đầu tiên</h3>
+                <p class="text-gray-300 text-sm leading-relaxed mb-4">Nhiều bỡ ngỡ, nhưng cũng xong xuôi ngon lành</p>
+                <div class="pt-4 border-t border-white/20 flex items-center gap-2">
+                    <i class="fa-solid fa-medal text-yellow-500"></i>
+                    <p class="text-xs font-semibold text-yellow-400 uppercase tracking-widest">Và mục tiêu 100% HSXS ra đời từ đây...</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="achieve-card activity relative overflow-hidden rounded-[2rem] h-[450px] shadow-2xl group" 
+             style="background: url('anh-lop-17-9.jpg') center/cover no-repeat;">
+            
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+
+            <div class="relative h-full p-8 flex flex-col justify-end text-white">
+                <span class="text-xs font-bold bg-white/20 backdrop-blur-md w-fit px-4 py-1 rounded-full mb-4 border border-white/30">17 Tháng 09, 2023</span>
+                <div class="text-purple-400 text-3xl mb-3"><i class="fa-solid fa-masks-theater"></i></div>
+                <h3 class="text-2xl font-bold mb-2">Những buổi học Speaking đầu tiên</h3>
+                <p class="text-gray-300 text-sm leading-relaxed mb-4">Màn combat giữa Huy bage và nhỏ lớp trưởng</p>
+                <div class="pt-4 border-t border-white/20 flex items-center gap-2">
+                    <i class="fa-solid fa-trophy text-yellow-500"></i>
+                    <p class="text-xs font-semibold text-yellow-400 uppercase tracking-widest">Thắng thua bất phân nhưng Huy bage được quả ăn mừng...khá nhiệt</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="achieve-card study relative overflow-hidden rounded-[2rem] h-[450px] shadow-2xl group" 
+             style="background: url('anh-lop-18-9.jpg') center/cover no-repeat ;">
+            
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+
+            <div class="relative h-full p-8 flex flex-col justify-end text-white">
+                <span class="text-xs font-bold bg-white/20 backdrop-blur-md w-fit px-4 py-1 rounded-full mb-4 border border-white/30">18 Tháng 9, 2023</span>
+                <div class="text-green-400 text-3xl mb-3"><i class="fa-solid fa-school"></i></div>
+                <h3 class="text-2xl font-bold mb-2">Bức ảnh tập thể lớp hẩn hoi đầu tiên</h3>
+                <p class="text-gray-300 text-sm leading-relaxed mb-4">Chụp sau khi tham quan lịch sử trường</p>
+                <div class="pt-4 border-t border-white/20 flex items-center gap-2">
+                    <i class="fa-solid fa-medal text-yellow-500"></i>
+                    <p class="text-xs font-semibold text-yellow-400 uppercase tracking-widest">Độ sáng hình như chỉnh hơi quá tay ạ</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="achieve-card study relative overflow-hidden rounded-[2rem] h-[450px] shadow-2xl group" 
+             style="background: url('anh-lop-20-9.jpg') center/cover no-repeat ;">
+            
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+
+            <div class="relative h-full p-8 flex flex-col justify-end text-white">
+                <span class="text-xs font-bold bg-white/20 backdrop-blur-md w-fit px-4 py-1 rounded-full mb-4 border border-white/30">20 Tháng 9, 2023</span>
+                <div class="text-green-400 text-3xl mb-3"><i class="fa-solid fa-school"></i></div>
+                <h3 class="text-2xl font-bold mb-2">Những tiết học Văn đầu tiên</h3>
+                <p class="text-gray-300 text-sm leading-relaxed mb-4">Văn vẻ thì ko biết sao chứ vẽ vời thì tòe nhòe</p>
+                <div class="pt-4 border-t border-white/20 flex items-center gap-2">
+                    <i class="fa-solid fa-medal text-yellow-500"></i>
+                    <p class="text-xs font-semibold text-yellow-400 uppercase tracking-widest">Trông đã mắt phết nhỉ</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="achieve-card study relative overflow-hidden rounded-[2rem] h-[450px] shadow-2xl group" 
+             style="background: url('trungthu.jpg') center/cover no-repeat ;">
+            
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+
+            <div class="relative h-full p-8 flex flex-col justify-end text-white">
+                <span class="text-xs font-bold bg-white/20 backdrop-blur-md w-fit px-4 py-1 rounded-full mb-4 border border-white/30">29 Tháng 9, 2023</span>
+                <div class="text-green-400 text-3xl mb-3"><i class="fa-solid fa-school"></i></div>
+                <h3 class="text-2xl font-bold mb-2">Cái trung thu cùng nhau đầu tiên</h3>
+                <p class="text-gray-300 text-sm leading-relaxed mb-4">Được phụ huynh tài trợ nên đớp thả ga hehe</p>
+                <div class="pt-4 border-t border-white/20 flex items-center gap-2">
+                    <i class="fa-solid fa-medal text-yellow-500"></i>
+                    <p class="text-xs font-semibold text-yellow-400 uppercase tracking-widest">Đố biết người đang đứng quay lưng lại là ai?</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="achieve-card study relative overflow-hidden rounded-[2rem] h-[450px] shadow-2xl group" 
+             style="background: url('anh-lop-8-10.jpg') center/cover no-repeat ;">
+            
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+
+            <div class="relative h-full p-8 flex flex-col justify-end text-white">
+                <span class="text-xs font-bold bg-white/20 backdrop-blur-md w-fit px-4 py-1 rounded-full mb-4 border border-white/30">8 Tháng 10, 2023</span>
+                <div class="text-green-400 text-3xl mb-3"><i class="fa-solid fa-school"></i></div>
+                <h3 class="text-2xl font-bold mb-2">Bữa cơm trưa cùng nhau đầu tiên</h3>
+                <p class="text-gray-300 text-sm leading-relaxed mb-4">Được phụ huynh tài trợ tiếp nên tiếp tục đớp thả ga hehe</p>
+                <div class="pt-4 border-t border-white/20 flex items-center gap-2">
+                    <i class="fa-solid fa-medal text-yellow-500"></i>
+                    <p class="text-xs font-semibold text-yellow-400 uppercase tracking-widest">Vân Anh trông gang gang đấy</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="achieve-card study relative overflow-hidden rounded-[2rem] h-[450px] shadow-2xl group" 
+             style="background: url('anh-lop-15-10.jpg') center/cover no-repeat ;">
+            
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+
+            <div class="relative h-full p-8 flex flex-col justify-end text-white">
+                <span class="text-xs font-bold bg-white/20 backdrop-blur-md w-fit px-4 py-1 rounded-full mb-4 border border-white/30">15 Tháng 10, 2023</span>
+                <div class="text-green-400 text-3xl mb-3"><i class="fa-solid fa-school"></i></div>
+                <h3 class="text-2xl font-bold mb-2">Tổ chức sinh nhật cho cô Phương Anh</h3>
+                <p class="text-gray-300 text-sm leading-relaxed mb-4">Đeo quả kính trông tếu thật</p>
+                <div class="pt-4 border-t border-white/20 flex items-center gap-2">
+                    <i class="fa-solid fa-medal text-yellow-500"></i>
+                    <p class="text-xs font-semibold text-yellow-400 uppercase tracking-widest">Nhưng sao dạy được có 1 năm mà cô bỏ bọn e ròi</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="achieve-card study relative overflow-hidden rounded-[2rem] h-[450px] shadow-2xl group" 
+             style="background: url('anh-lop-22-10.jpg') center/cover no-repeat ;">
+            
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+
+            <div class="relative h-full p-8 flex flex-col justify-end text-white">
+                <span class="text-xs font-bold bg-white/20 backdrop-blur-md w-fit px-4 py-1 rounded-full mb-4 border border-white/30">22 Tháng 10, 2023</span>
+                <div class="text-green-400 text-3xl mb-3"><i class="fa-solid fa-school"></i></div>
+                <h3 class="text-2xl font-bold mb-2">Thế nào là cảm giác chiến thắng?</h3>
+                <p class="text-gray-300 text-sm leading-relaxed mb-4">Là thế này nè</p>
+                <div class="pt-4 border-t border-white/20 flex items-center gap-2">
+                    <i class="fa-solid fa-medal text-yellow-500"></i>
+                    <p class="text-xs font-semibold text-yellow-400 uppercase tracking-widest">Mỹ An còn bay theo nghĩa đen luôn mà </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="achieve-card study relative overflow-hidden rounded-[2rem] h-[450px] shadow-2xl group" 
+             style="background: url('anh-lop-18-10.jpg') center/cover no-repeat ;">
+            
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+
+            <div class="relative h-full p-8 flex flex-col justify-end text-white">
+                <span class="text-xs font-bold bg-white/20 backdrop-blur-md w-fit px-4 py-1 rounded-full mb-4 border border-white/30">18 Tháng 11, 2023</span>
+                <div class="text-green-400 text-3xl mb-3"><i class="fa-solid fa-school"></i></div>
+                <h3 class="text-2xl font-bold mb-2">Quốc tế nam giới đầu tiên</h3>
+                <p class="text-gray-300 text-sm leading-relaxed mb-4">4 thằng 4 cái áo, quá chất</p>
+                <div class="pt-4 border-t border-white/20 flex items-center gap-2">
+                    <i class="fa-solid fa-medal text-yellow-500"></i>
+                    <p class="text-xs font-semibold text-yellow-400 uppercase tracking-widest">Yên tâm, giờ tụi tui vẫn còn mặc nhé.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="achieve-card study relative overflow-hidden rounded-[2rem] h-[450px] shadow-2xl group" 
+             style="background: url('anh-lop-20-11.jpg') center/cover no-repeat ;">
+            
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+
+            <div class="relative h-full p-8 flex flex-col justify-end text-white">
+                <span class="text-xs font-bold bg-white/20 backdrop-blur-md w-fit px-4 py-1 rounded-full mb-4 border border-white/30">20 Tháng 11, 2023</span>
+                <div class="text-green-400 text-3xl mb-3"><i class="fa-solid fa-school"></i></div>
+                <h3 class="text-2xl font-bold mb-2">Văn nghệ 20/11 đầu tiên</h3>
+                <p class="text-gray-300 text-sm leading-relaxed mb-4">Bài tên chi ấy quên r ta</p>
+                <div class="pt-4 border-t border-white/20 flex items-center gap-2">
+                    <i class="fa-solid fa-medal text-yellow-500"></i>
+                    <p class="text-xs font-semibold text-yellow-400 uppercase tracking-widest">Và, lại thêm quả về nhì tiếp</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="achieve-card study relative overflow-hidden rounded-[2rem] h-[450px] shadow-2xl group" 
+             style="background: url('anh-lop-21-1.jpg') center/cover no-repeat ;">
+            
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+
+            <div class="relative h-full p-8 flex flex-col justify-end text-white">
+                <span class="text-xs font-bold bg-white/20 backdrop-blur-md w-fit px-4 py-1 rounded-full mb-4 border border-white/30">02 Tháng 01, 2024</span>
+                <div class="text-green-400 text-3xl mb-3"><i class="fa-solid fa-school"></i></div>
+                <h3 class="text-2xl font-bold mb-2">Buổi liên hoan lớp đầu tiên</h3>
+                <p class="text-gray-300 text-sm leading-relaxed mb-4"></p>
+                <div class="pt-4 border-t border-white/20 flex items-center gap-2">
+                    <i class="fa-solid fa-medal text-yellow-500"></i>
+                    <p class="text-xs font-semibold text-yellow-400 uppercase tracking-widest">Buổi liên hoan kì 1 hoành tráng nhất trong 3 năm</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="achieve-card study relative overflow-hidden rounded-[2rem] h-[450px] shadow-2xl group" 
+             style="background: url('anh-lop-26-3.jpg') center/cover no-repeat ;">
+            
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+
+            <div class="relative h-full p-8 flex flex-col justify-end text-white">
+                <span class="text-xs font-bold bg-white/20 backdrop-blur-md w-fit px-4 py-1 rounded-full mb-4 border border-white/30">26 Tháng 03, 2024</span>
+                <div class="text-green-400 text-3xl mb-3"><i class="fa-solid fa-school"></i></div>
+                <h3 class="text-2xl font-bold mb-2">Tổ chức sinh nhật cho cô Thủy</h3>
+                <p class="text-gray-300 text-sm leading-relaxed mb-4"></p>
+                <div class="pt-4 border-t border-white/20 flex items-center gap-2">
+                    <i class="fa-solid fa-medal text-yellow-500"></i>
+                    <p class="text-xs font-semibold text-yellow-400 uppercase tracking-widest">Cô giấu ai chứ sao mà giấu bọn này được</p>
+                </div>
+            </div>
+        </div>
+        <div class="achieve-card study relative overflow-hidden rounded-[2rem] h-[450px] shadow-2xl group" 
+             style="background: url('anh-lop-6-10.jpg') center/cover no-repeat ;">
+            
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+
+            <div class="relative h-full p-8 flex flex-col justify-end text-white">
+                <span class="text-xs font-bold bg-white/20 backdrop-blur-md w-fit px-4 py-1 rounded-full mb-4 border border-white/30">06 Tháng 10, 2024</span>
+                <div class="text-green-400 text-3xl mb-3"><i class="fa-solid fa-school"></i></div>
+                <h3 class="text-2xl font-bold mb-2">Chiếc huy chương bạc bóng ném thứ 2</h3>
+                <p class="text-gray-300 text-sm leading-relaxed mb-4"></p>
+                <div class="pt-4 border-t border-white/20 flex items-center gap-2">
+                    <i class="fa-solid fa-medal text-yellow-500"></i>
+                    <p class="text-xs font-semibold text-yellow-400 uppercase tracking-widest">Liên minh A2 nhưng + dc có 1 vận động viên</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="achieve-card study relative overflow-hidden rounded-[2rem] h-[450px] shadow-2xl group" 
+             style="background: url('anh-lop-20-10-1.jpg') center/cover no-repeat ;">
+            
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+
+            <div class="relative h-full p-8 flex flex-col justify-end text-white">
+                <span class="text-xs font-bold bg-white/20 backdrop-blur-md w-fit px-4 py-1 rounded-full mb-4 border border-white/30">20 Tháng 10, 2024</span>
+                <div class="text-green-400 text-3xl mb-3"><i class="fa-solid fa-school"></i></div>
+                <h3 class="text-2xl font-bold mb-2">Cái 20 tháng 10 thứ 2 </h3>
+                <p class="text-gray-300 text-sm leading-relaxed mb-4"></p>
+                <div class="pt-4 border-t border-white/20 flex items-center gap-2">
+                    <i class="fa-solid fa-medal text-yellow-500"></i>
+                    <p class="text-xs font-semibold text-yellow-400 uppercase tracking-widest">Bức ảnh đông đủ thành viên nhất trong 3 năm!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="achieve-card study relative overflow-hidden rounded-[2rem] h-[450px] shadow-2xl group" 
+             style="background: url('anh-lop-19-11.jpg') center/cover no-repeat ;">
+            
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+
+            <div class="relative h-full p-8 flex flex-col justify-end text-white">
+                <span class="text-xs font-bold bg-white/20 backdrop-blur-md w-fit px-4 py-1 rounded-full mb-4 border border-white/30">19 Tháng 11, 2024</span>
+                <div class="text-green-400 text-3xl mb-3"><i class="fa-solid fa-school"></i></div>
+                <h3 class="text-2xl font-bold mb-2">Quả 19 tháng 11 rất ý nghĩaaa</h3>
+                <p class="text-gray-300 text-sm leading-relaxed mb-4"></p>
+                <div class="pt-4 border-t border-white/20 flex items-center gap-2">
+                    <i class="fa-solid fa-medal text-yellow-500"></i>
+                    <p class="text-xs font-semibold text-yellow-400 uppercase tracking-widest">6 thằng thay nhau được mấy quả edit cực định của các nàng</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="achieve-card study relative overflow-hidden rounded-[2rem] h-[450px] shadow-2xl group" 
+             style="background: url('anh-lop-9-11.jpg') center/cover no-repeat ;">
+            
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+
+            <div class="relative h-full p-8 flex flex-col justify-end text-white">
+                <span class="text-xs font-bold bg-white/20 backdrop-blur-md w-fit px-4 py-1 rounded-full mb-4 border border-white/30">09 Tháng 1, 2025</span>
+                <div class="text-green-400 text-3xl mb-3"><i class="fa-solid fa-school"></i></div>
+                <h3 class="text-2xl font-bold mb-2">Huy chương bạc tiếp theo của văn nghệ lớp</h3>
+                <p class="text-gray-300 text-sm leading-relaxed mb-4"></p>
+                <div class="pt-4 border-t border-white/20 flex items-center gap-2">
+                    <i class="fa-solid fa-medal text-yellow-500"></i>
+                    <p class="text-xs font-semibold text-yellow-400 uppercase tracking-widest">Cánh chim phượng hoàng đúng k ta</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="achieve-card study relative overflow-hidden rounded-[2rem] h-[450px] shadow-2xl group" 
+             style="background: url('anh-lop-26-3-1.jpg') center/cover no-repeat ;">
+            
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+
+            <div class="relative h-full p-8 flex flex-col justify-end text-white">
+                <span class="text-xs font-bold bg-white/20 backdrop-blur-md w-fit px-4 py-1 rounded-full mb-4 border border-white/30">26 Tháng 03, 2025</span>
+                <div class="text-green-400 text-3xl mb-3"><i class="fa-solid fa-school"></i></div>
+                <h3 class="text-2xl font-bold mb-2">Cái hội trại thứ 2</h3>
+                <p class="text-gray-300 text-sm leading-relaxed mb-4"></p>
+                <div class="pt-4 border-t border-white/20 flex items-center gap-2">
+                    <i class="fa-solid fa-medal text-yellow-500"></i>
+                    <p class="text-xs font-semibold text-yellow-400 uppercase tracking-widest">Năm mà ẵm 3 giải tập thể, quá giỏi</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="achieve-card study relative overflow-hidden rounded-[2rem] h-[450px] shadow-2xl group" 
+             style="background: url('anh-lop-3-10.jpg') center/cover no-repeat ;">
+            
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+
+            <div class="relative h-full p-8 flex flex-col justify-end text-white">
+                <span class="text-xs font-bold bg-white/20 backdrop-blur-md w-fit px-4 py-1 rounded-full mb-4 border border-white/30">03 Tháng 10, 2025</span>
+                <div class="text-green-400 text-3xl mb-3"><i class="fa-solid fa-school"></i></div>
+                <h3 class="text-2xl font-bold mb-2">Lại là chiếc huy chương bạc bóng ném (lần thứ 3)</h3>
+                <p class="text-gray-300 text-sm leading-relaxed mb-4"></p>
+                <div class="pt-4 border-t border-white/20 flex items-center gap-2">
+                    <i class="fa-solid fa-medal text-yellow-500"></i>
+                    <p class="text-xs font-semibold text-yellow-400 uppercase tracking-widest">Giỏi rồi các nàng ơi.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="achieve-card study relative overflow-hidden rounded-[2rem] h-[450px] shadow-2xl group" 
+             style="background: url('anh-lop-19-11-1.jpg') center/cover no-repeat ;">
+            
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+
+            <div class="relative h-full p-8 flex flex-col justify-end text-white">
+                <span class="text-xs font-bold bg-white/20 backdrop-blur-md w-fit px-4 py-1 rounded-full mb-4 border border-white/30">19 Tháng 11, 2025</span>
+                <div class="text-green-400 text-3xl mb-3"><i class="fa-solid fa-school"></i></div>
+                <h3 class="text-2xl font-bold mb-2">Cái Quốc tế Nam giới lần 3</h3>
+                <p class="text-gray-300 text-sm leading-relaxed mb-4"></p>
+                <div class="pt-4 border-t border-white/20 flex items-center gap-2">
+                    <i class="fa-solid fa-medal text-yellow-500"></i>
+                    <p class="text-xs font-semibold text-yellow-400 uppercase tracking-widest">Các nàng đầu tư phải gọi là quá hoành trángg, bất ngờ đấyy</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="achieve-card study relative overflow-hidden rounded-[2rem] h-[450px] shadow-2xl group" 
+             style="background: url('anh-lop-21-11.jpg') center/cover no-repeat ;">
+            
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+
+            <div class="relative h-full p-8 flex flex-col justify-end text-white">
+                <span class="text-xs font-bold bg-white/20 backdrop-blur-md w-fit px-4 py-1 rounded-full mb-4 border border-white/30">21 Tháng 11, 2025</span>
+                <div class="text-green-400 text-3xl mb-3"><i class="fa-solid fa-school"></i></div>
+                <h3 class="text-2xl font-bold mb-2">Văn nghệ này không huy chương, nhưng có danh hiệu</h3>
+                <p class="text-gray-300 text-sm leading-relaxed mb-4"></p>
+                <div class="pt-4 border-t border-white/20 flex items-center gap-2">
+                    <i class="fa-solid fa-medal text-yellow-500"></i>
+                    <p class="text-xs font-semibold text-yellow-400 uppercase tracking-widest">Quan trọng là chúng ta đã cố gắng, và quan trọng hơn là...KỈ NIỆM</p>
+                </div>
+            </div>
+        </div>
+
+
+        </div>
+
+    
+</body>
+</html>

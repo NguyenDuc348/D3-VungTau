@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kỷ niệm D3 Vũng Tàu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <style>
+            .custom-bg {
+            background-image: linear-gradient(rgba(255, 245, 240, 0.2), rgba(255, 245, 240, 0.2)), 
+                              url('anh-lop-009.jpg');
+            background-size: cover;
+            background-position: center bottom;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+        
+        
+        .swiper { width: 100%; height: 500px; border-radius: 20px; }
+
+        .slide-bottom {
+    
+    object-position: center bottom;
+    object-position: center 80%; 
+}
+        
+    
+        nav { backdrop-filter: blur(8px); }
+    </style>
+
+    <script>
+    var password = "D3VungTau23-26"; 
+    var userPass = prompt("Chào mừng bạn đến với D3 Vũng Tàu! Vui lòng nhập mật mã để vào:");
+
+    if (userPass !== password) {
+        alert("Sai mật mã rồi bạn ơi! Hẹn gặp lại nhé.");
+        window.location.href = "about:blank"; 
+    }
+</script>
+
+</head>
+
+<body class="custom-bg pt-20 min-h-screen">
+    
+    <nav class="fixed top-0 w-full bg-white/70 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="main-duphong.html" class="text-2xl font-bold text-orange-1000">D3 Vung Tau</a>
+            <div class="space-x-8 font-medium text-slate-700">
+                <a href="main-duphong.html" class="hover:text-orange-500 transition text-orange-600">Trang chủ</a>
+                <a href="thanhvien.html" class="hover:text-orange-500 transition">Thành viên</a>
+                <a href="thanhtich.html" class="hover:text-orange-500 transition">Thành tựu</a>
+                <a href="loinhan1.html" class="hover:text-orange-500 transition">Tâm tư</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="max-w-7xl mx-auto px-6 py-12">
+        <div class="text-center mb-16">
+            <h1 class="text-6xl font-bold text-orange-900 mb-4 drop-shadow-md">D3 Vũng Tàu</h1>
+            <p class="text-xl text-orange-700 italic font-semibold">"Nơi thanh xuân rực rỡ nhất (2023 - 2026)"</p>
+        </div>
+
+        <div class="swiper mySwiper shadow-2xl border-4 border-white">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="anh-lop-1.jpg" class="w-full h-full object-cover"></div>
+                <div class="swiper-slide"><img src="anh-lop-2.jpg" class="w-full h-full object-cover"></div>
+                <div class="swiper-slide"><img src="anh-lop-3.jpg" class="w-full h-full object-cover slide-bottom"></div>
+                <div class="swiper-slide"><img src="anh-lop-4.jpg" class="w-full h-full object-cover slide-bottom"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next text-white"></div>
+            <div class="swiper-button-prev text-white"></div>
+        </div>
+
+        <div class="mt-20 bg-white/60 p-10 rounded-3xl backdrop-blur-sm shadow-inner text-center">
+            <h2 class="text-3xl font-bold text-orange-800 mb-6">Về chúng mình</h2>
+            <p class="text-lg text-slate-800 max-w-3xl mx-auto leading-relaxed">
+                D3 không chỉ là một lớp học, đó là một gia đình. Tại THPT Vũng Tàu, chúng mình đã cùng nhau đi qua những năm tháng học trò đẹp nhất. Từng góc sân trường, từng hàng cây đều in dấu những kỷ niệm không thể nào quên của tuổi học trò niên khóa 2023-2026.
+            </p>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            pagination: { el: ".swiper-pagination", clickable: true },
+            navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+            autoplay: { delay: 3000 },
+            loop: true
+        });
+    </script>
+</body>
+</html>

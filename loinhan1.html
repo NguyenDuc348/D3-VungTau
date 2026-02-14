@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!--Phần này nhóm tụi em có sử dụng thêm phần mềm thứ ba là Supabase để có thể tải cái tâm thư lên ngay trên web khi mà bất kì ai nhập, và có mã bí mật để sửa cũng như xóa tâm thư gửi lên nếu muốn. Tuy nhiên vì xài bản free nên project sẽ ngưng hoạt động nếu 7 ngày liên tục không có tín hiệu, vì vậy thì cứ 6 ngày phải vô gửi 1 tâm tư để duy trì hoạt động. Nên nếu khi cô thử nghiệm mà nó bị lỗi, cô có thể liên lạc e để e khởi động lại project (zalo: 0939250377) -->
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Góc Tâm Tư D3</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { background: #fffaf0;  }
+        .message-card { animation: fadeIn 0.5s ease; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body class="pt-24 pb-20">
+
+    <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="main-duphong.html" class="text-2xl font-bold text-orange-600">D3 Vung Tau</a>
+            <div class="space-x-8 font-medium text-slate-700">
+                <a href="main-duphong.html" class="hover:text-orange-500">Trang chủ</a>
+                <a href="thanhvien.html" class="hover:text-orange-500">Thành viên</a>
+                <a href="thanhtich.html" class="hover:text-orange-500">Thành tựu</a>
+                <a href="loinhan1.html" class="text-orange-500 border-b-2 border-orange-500">Tâm tư</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="max-w-3xl mx-auto px-6">
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-amber-900">Góc Tâm Tư</h1>
+            <p class="text-amber-700 italic mt-2">Nơi những lời chưa nói được viết thành lời</p>
+        </div>
+
+        <div class="bg-white p-8 rounded-3xl shadow-xl mb-16 border border-amber-100">
+            <div class="grid grid-cols-2 gap-4 mb-4">
+                <input type="text" id="msgName" placeholder="Tên của bạn" class="p-3 bg-amber-50 border-none rounded-xl focus:ring-2 ring-amber-400 outline-none">
+                <input type="password" id="msgKey" placeholder="Mã bí mật (để sửa/xóa)" class="p-3 bg-amber-50 border-none rounded-xl focus:ring-2 ring-amber-400 outline-none">
+            </div>
+            <textarea id="msgContent" rows="5" maxlength="1000" placeholder="Chia sẻ tâm tư của bạn tại đây (tối đa 1000 từ)..." class="w-full p-4 bg-amber-50 border-none rounded-xl mb-4 outline-none focus:ring-2 ring-amber-400"></textarea>
+            <button onclick="postMessage()" class="w-full bg-amber-600 text-white py-3 rounded-xl font-bold hover:bg-amber-700 transition duration-300 shadow-lg shadow-amber-200">
+                <i class="fa-solid fa-paper-plane mr-2"></i> Gửi Lời Nhắn
+            </button>
+        </div>
+
+        <div id="messageBoard" class="space-y-6">
+            </div>
+    </div>
+
+    <script>
+        
+        const SB_URL = 'https://ooaohqlqdrtyxdsootur.supabase.co';
+        const SB_KEY = 'sb_publishable_0iplQucmWNW3Mnrtg7CRQA_Bh-pOqNi'; 
+        const db = supabase.createClient(SB_URL, SB_KEY);
+
+        async function fetchMessages() {
+            const { data, error } = await db.from('messages').select('*').order('created_at', { ascending: false });
+            if (error) return console.error(error);
+            
+            const board = document.getElementById('messageBoard');
+            board.innerHTML = data.map(msg => `
+                <div class="message-card bg-white p-6 rounded-2xl shadow-sm border-l-8 border-amber-500 relative group">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-bold text-amber-900">${msg.name}</h4>
+                        <div class="opacity-0 group-hover:opacity-100 transition flex gap-4">
+                            <button onclick="editMsg('${msg.id}')" class="text-blue-500 text-xs hover:underline"><i class="fa-solid fa-pen"></i> Sửa</button>
+                            <button onclick="deleteMsg('${msg.id}')" class="text-red-500 text-xs hover:underline"><i class="fa-solid fa-trash"></i> Xóa</button>
+                        </div>
+                    </div>
+                    <p class="text-slate-700 leading-relaxed whitespace-pre-wrap">${msg.content}</p>
+                    <div class="text-[10px] text-slate-400 mt-4">${new Date(msg.created_at).toLocaleString()}</div>
+                </div>
+            `).join('');
+        }
+
+        async function postMessage() {
+    const name = document.getElementById('msgName').value;
+    const content = document.getElementById('msgContent').value;
+    const key = document.getElementById('msgKey').value;
+
+    if(!name || !content || !key) return alert("Vui lòng điền đủ thông tin!");
+
+    const { data, error } = await db.from('messages').insert([{ 
+        name: name, 
+        content: content, 
+        edit_key: key 
+    }]);
+
+    if (error) {
+        
+        console.error("Chi tiết lỗi:", error);
+        alert("Lỗi cụ thể: " + error.message); 
+    } else {
+        alert("Gửi thành công!");
+        document.getElementById('msgContent').value = '';
+        fetchMessages();
+    }
+}
+
+        async function deleteMsg(id) {
+            const key = prompt("Nhập mã bí mật của bạn để xóa:");
+            if (!key) return;
+            const { error } = await db.from('messages').delete().eq('id', id).eq('edit_key', key);
+            if (error) alert("Mã bí mật không đúng!"); else fetchMessages();
+        }
+
+        async function editMsg(id) {
+            const key = prompt("Nhập mã bí mật của bạn để sửa:");
+            if (!key) return;
+            const newContent = prompt("Nhập nội dung mới:");
+            if (!newContent) return;
+            const { error } = await db.from('messages').update({ content: newContent }).eq('id', id).eq('edit_key', key);
+            if (error) alert("Mã bí mật không đúng!"); else fetchMessages();
+        }
+
+        window.onload = fetchMessages;
+    </script>
+</body>
+</html>

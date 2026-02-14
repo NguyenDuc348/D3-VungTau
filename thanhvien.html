@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thành viên D3 - Vũng Tàu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { background: #fff5f0; } 
+        .member-card:hover { transform: translateY(-5px); transition: 0.3s; }
+        .slide-bottom {
+    object-position: center bottom;
+    object-position: center 35%; 
+}
+    </style>
+</head>
+<body class="pt-24 pb-20">
+
+    <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="main-duphong.html" class="text-2xl font-bold text-orange-600">D3 Vung Tau</a>
+            <div class="space-x-8 font-medium text-slate-700">
+                <a href="main-duphong.html" class="hover:text-orange-500">Trang chủ</a>
+                <a href="thanhvien.html" class="text-orange-500">Thành viên</a>
+                <a href="thanhtich.html" class="hover:text-orange-500">Thành tựu</a>
+                <a href="loinhan1.html" class="hover:text-orange-500">Tâm tư</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="max-w-7xl mx-auto px-6 mb-12 text-center">
+        <h1 class="text-4xl font-bold text-orange-900">Mảnh Ghép D3</h1>
+        <p class="text-orange-700 italic mt-2">Nơi những cá tính hội tụ</p>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        
+        <div class="member-card bg-white rounded-3xl p-6 shadow-md border border-orange-100 flex flex-col items-center text-center">
+            <div class="w-28 h-28 rounded-full overflow-hidden mb-4 border-4 border-orange-50 shadow-inner">
+                <img src="nhung.jpg" alt="Nhung" class="w-full h-full object-cover">
+            </div>
+            <h3 class="text-xl font-bold text-orange-900">Trần Thị Tuyết Nhung</h3>
+            <p class="bg-rose-100 text-rose-600 text-xs px-3 py-1 rounded-full font-bold my-2">"Nhỏ lớp trưởng"</p>
+            
+            <div class="text-sm text-slate-600 space-y-2 text-left w-full border-t border-orange-50 pt-4 mt-2">
+                <p><i class="fa-solid fa-cake-candles text-orange-400 mr-2"></i> <b>Ngày sinh:</b> 15/02/2008</p> 
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm mạnh:</b> Lãnh đạo, quản lớp</p>
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm yếu:</b> Lâu lâu hơi khùng khùng (chắc do học nhiều).</p>
+            </div>
+        </div>
+
+        <div class="member-card bg-white rounded-3xl p-6 shadow-md border border-orange-100 flex flex-col items-center text-center">
+            <div class="w-28 h-28 rounded-full overflow-hidden mb-4 border-4 border-orange-50 shadow-inner">
+                <img src="dangthao.jpg" alt="Nhung" class="w-full h-full object-cover">
+            </div>
+            <h3 class="text-xl font-bold text-orange-900">Đặng Phương Thảo</h3>
+            <p class="bg-rose-100 text-rose-600 text-xs px-3 py-1 rounded-full font-bold my-2">"Dancer D3"</p>
+            
+            <div class="text-sm text-slate-600 space-y-2 text-left w-full border-t border-orange-50 pt-4 mt-2">
+                <p><i class="fa-solid fa-cake-candles text-orange-400 mr-2"></i> <b>Ngày sinh:</b> 12/05/2008</p> 
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm mạnh:</b> Thân thiện, nhảy giỏi</p>
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm yếu:</b> Nơ ron nhạy nên cười hơi nhiều</p>
+            </div>
+        </div>
+
+        <div class="member-card bg-white rounded-3xl p-6 shadow-md border border-orange-100 flex flex-col items-center text-center">
+            <div class="w-28 h-28 rounded-full overflow-hidden mb-4 border-4 border-orange-50 shadow-inner">
+                <img src="hoangan.jpg" alt="Nhung" class="w-full h-full object-cover">
+            </div>
+            <h3 class="text-xl font-bold text-orange-900">Hoàng Thùy An</h3>
+            <p class="bg-rose-100 text-rose-600 text-xs px-3 py-1 rounded-full font-bold my-2">"Bé mắt híp học giỏi"</p>
+            
+            <div class="text-sm text-slate-600 space-y-2 text-left w-full border-t border-orange-50 pt-4 mt-2">
+                <p><i class="fa-solid fa-cake-candles text-orange-400 mr-2"></i> <b>Ngày sinh:</b> 08/02/2008</p> 
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm mạnh:</b> Học sinh giỏi văn học giỏi toán</p>
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm yếu:</b> Văn toán lẫn lộn nhiều khi sai nhảm, mà sai nhảm là cười trừ</p>
+            </div>
+        </div>
+        <div class="member-card bg-white rounded-3xl p-6 shadow-md border border-orange-100 flex flex-col items-center text-center">
+            <div class="w-28 h-28 rounded-full overflow-hidden mb-4 border-4 border-orange-50 shadow-inner">
+                <img src="LuongAn.jpg" alt="Nhung" class="w-full h-full object-cover">
+            </div>
+            <h3 class="text-xl font-bold text-orange-900">Lương Thùy An</h3>
+            <p class="bg-rose-100 text-rose-600 text-xs px-3 py-1 rounded-full font-bold my-2">"Leonardo Da Vinci của D3"</p>
+            
+            <div class="text-sm text-slate-600 space-y-2 text-left w-full border-t border-orange-50 pt-4 mt-2">
+                <p><i class="fa-solid fa-cake-candles text-orange-400 mr-2"></i> <b>Ngày sinh:</b> 13/08/2008</p> 
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm mạnh:</b> Tay có 10 ngón thôi nhưng tới 20 hoa tay</p>
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm yếu:</b> Vì hoạt động cật lực cho những bức vẽ nên thi thoảng sập nguồn giữa tiết học</p>
+            </div>
+        </div>   
+        <div class="member-card bg-white rounded-3xl p-6 shadow-md border border-orange-100 flex flex-col items-center text-center">
+            <div class="w-28 h-28 rounded-full overflow-hidden mb-4 border-4 border-orange-50 shadow-inner">
+                <img src="TangAn.jpg" alt="Nhung" class="w-full h-full object-cover">
+            </div>
+            <h3 class="text-xl font-bold text-orange-900">Tăng Mỹ An</h3>
+            <p class="bg-rose-100 text-rose-600 text-xs px-3 py-1 rounded-full font-bold my-2">"Dancer (minion size) của D3"</p>
+            
+            <div class="text-sm text-slate-600 space-y-2 text-left w-full border-t border-orange-50 pt-4 mt-2">
+                <p><i class="fa-solid fa-cake-candles text-orange-400 mr-2"></i> <b>Ngày sinh:</b> 11/08/2008</p> 
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm mạnh:</b> Hoạt bát, vui vẻ, hòa đồng</p>
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm yếu:</b> Loi choi, nhí nha nhí nhảnh</p>
+            </div>
+        </div>     
+
+<div class="member-card bg-white rounded-3xl p-6 shadow-md border border-orange-100 flex flex-col items-center text-center">
+            <div class="w-28 h-28 rounded-full overflow-hidden mb-4 border-4 border-orange-50 shadow-inner">
+                <img src="chauanh.jpg" alt="Nhung" class="w-full h-full object-cover">
+            </div>
+            <h3 class="text-xl font-bold text-orange-900">Đỗ Châu Anh</h3>
+            <p class="bg-rose-100 text-rose-600 text-xs px-3 py-1 rounded-full font-bold my-2">"Photographer của D3"</p>
+            
+            <div class="text-sm text-slate-600 space-y-2 text-left w-full border-t border-orange-50 pt-4 mt-2">
+                <p><i class="fa-solid fa-cake-candles text-orange-400 mr-2"></i> <b>Ngày sinh:</b> 24/03/2008</p> 
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm mạnh:</b> Nhanh nhẹn, tốt tính, thân thiện, chụp ảnh nét đét đèn đẹt</p>
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm yếu:</b> Nói người khác ko nghe cái là "À hoi hong có gì đâu" (đúng ghét)</p>
+            </div>
+        </div>
+        <div class="member-card bg-white rounded-3xl p-6 shadow-md border border-orange-100 flex flex-col items-center text-center">
+            <div class="w-28 h-28 rounded-full overflow-hidden mb-4 border-4 border-orange-50 shadow-inner">
+                <img src="dma.jpg" alt="Nhung" class="w-full h-full object-cover">
+            </div>
+            <h3 class="text-xl font-bold text-orange-900">Đỗ Minh Anh</h3>
+            <p class="bg-rose-100 text-rose-600 text-xs px-3 py-1 rounded-full font-bold my-2">"Decor Stylist"</p>
+            
+            <div class="text-sm text-slate-600 space-y-2 text-left w-full border-t border-orange-50 pt-4 mt-2">
+                <p><i class="fa-solid fa-cake-candles text-orange-400 mr-2"></i> <b>Ngày sinh:</b> 27/03/2008</p> 
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm mạnh:</b> Khéo tay, có thẩm mỹ decor</p>
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm yếu:</b> Rào cản đam mê sticker: Đặng Thanh Trì </p>
+            </div>
+        </div>
+        <div class="member-card bg-white rounded-3xl p-6 shadow-md border border-orange-100 flex flex-col items-center text-center">
+            <div class="w-28 h-28 rounded-full overflow-hidden mb-4 border-4 border-orange-50 shadow-inner">
+                <img src="vananh.jpg" alt="Nhung" class="w-full h-full object-cover">
+            </div>
+            <h3 class="text-xl font-bold text-orange-900">Lương Thị Vân Anh</h3>
+            <p class="bg-rose-100 text-rose-600 text-xs px-3 py-1 rounded-full font-bold my-2">"Nonchalanter"</p>
+            
+            <div class="text-sm text-slate-600 space-y-2 text-left w-full border-t border-orange-50 pt-4 mt-2">
+                <p><i class="fa-solid fa-cake-candles text-orange-400 mr-2"></i> <b>Ngày sinh:</b> 28/07/2008</p> 
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm mạnh:</b> Đơn giản hóa vấn đề</p>
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm yếu:</b> Đơn giản được hay không thì vẫn cứ là nonchalant</p>
+            </div>
+        </div>
+        <div class="member-card bg-white rounded-3xl p-6 shadow-md border border-orange-100 flex flex-col items-center text-center">
+            <div class="w-28 h-28 rounded-full overflow-hidden mb-4 border-4 border-orange-50 shadow-inner">
+                <img src="hongminhanh.jpg" alt="Nhung" class="w-full h-full object-cover">
+            </div>
+            <h3 class="text-xl font-bold text-orange-900">Nguyễn Hồng Minh Anh</h3>
+            <p class="bg-rose-100 text-rose-600 text-xs px-3 py-1 rounded-full font-bold my-2">"Joker D3"</p>
+            
+            <div class="text-sm text-slate-600 space-y-2 text-left w-full border-t border-orange-50 pt-4 mt-2">
+                <p><i class="fa-solid fa-cake-candles text-orange-400 mr-2"></i> <b>Ngày sinh:</b> 26/05/2008</p> 
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm mạnh:</b> Thả joke đã, cười tẹt ga</p>
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm yếu:</b> Joke hài -> não hoạt động mệt -> ngủ -> đi học trễ -> joke luôn điểm lớp</p>
+            </div>
+        </div>
+        <div class="member-card bg-white rounded-3xl p-6 shadow-md border border-orange-100 flex flex-col items-center text-center">
+            <div class="w-28 h-28 rounded-full overflow-hidden mb-4 border-4 border-orange-50 shadow-inner">
+                <img src="banh.jpg" alt="Nhung" class="w-full h-full object-cover">
+            </div>
+            <h3 class="text-xl font-bold text-orange-900">Nguyễn Trần Bảo Anh</h3>
+            <p class="bg-rose-100 text-rose-600 text-xs px-3 py-1 rounded-full font-bold my-2">"Học bá khiêm tốn"</p>
+            
+            <div class="text-sm text-slate-600 space-y-2 text-left w-full border-t border-orange-50 pt-4 mt-2">
+                <p><i class="fa-solid fa-cake-candles text-orange-400 mr-2"></i> <b>Ngày sinh:</b> 01/09/2008</p> 
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm mạnh:</b> Nhanh nhẹn, hoạt bát, điểm chát như độ cận, toàn là 10</p>
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm yếu:</b> "Dạ có 28,3 thoi à cô" (nghe thấy ghéc)</p>
+            </div>
+        </div>
+        <div class="member-card bg-white rounded-3xl p-6 shadow-md border border-orange-100 flex flex-col items-center text-center">
+            <div class="w-28 h-28 rounded-full overflow-hidden mb-4 border-4 border-orange-50 shadow-inner">
+                <img src="kimanh.jpg" alt="Nhung" class="w-full h-full object-cover">
+            </div>
+            <h3 class="text-xl font-bold text-orange-900">Nguyễn Vũ Kim Anh</h3>
+            <p class="bg-rose-100 text-rose-600 text-xs px-3 py-1 rounded-full font-bold my-2">"Nonchalant nửa mùa"</p>
+            
+            <div class="text-sm text-slate-600 space-y-2 text-left w-full border-t border-orange-50 pt-4 mt-2">
+                <p><i class="fa-solid fa-cake-candles text-orange-400 mr-2"></i> <b>Ngày sinh:</b> 24/11/2008</p> 
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm mạnh:</b>Chăm dơ tay phát biển, chăm làm bài, hiền lành, cute</p>
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm yếu:</b> Lâu lâu làm bài ngẩng lên cười cái đúng tếu, gây mất tập trung cho các bạn</p>
+            </div>
+        </div>
+        <div class="member-card bg-white rounded-3xl p-6 shadow-md border border-orange-100 flex flex-col items-center text-center">
+            <div class="w-28 h-28 rounded-full overflow-hidden mb-4 border-4 border-orange-50 shadow-inner">
+                <img src="phuonganh.jpg" alt="Nhung" class="w-full h-full object-cover">
+            </div>
+            <h3 class="text-xl font-bold text-orange-900">Nguyễn Xuân Phương Anh</h3>
+            <p class="bg-rose-100 text-rose-600 text-xs px-3 py-1 rounded-full font-bold my-2">"Bí thư lớp"</p>
+            
+            <div class="text-sm text-slate-600 space-y-2 text-left w-full border-t border-orange-50 pt-4 mt-2">
+                <p><i class="fa-solid fa-cake-candles text-orange-400 mr-2"></i> <b>Ngày sinh:</b> 29/09/2008</p> 
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm mạnh:</b> Cẩn thận, tỉ mỉ, kinh nghiệm thủ quỹ 3 năm dày dặn ,fan Đình Bắc</p>
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm yếu:</b> Fan Man City</p>
+            </div>
+        </div>
+        <div class="member-card bg-white rounded-3xl p-6 shadow-md border border-orange-100 flex flex-col items-center text-center">
+            <div class="w-28 h-28 rounded-full overflow-hidden mb-4 border-4 border-orange-50 shadow-inner">
+                <img src="ngocanh.jpg" alt="Nhung" class="w-full h-full object-cover">
+            </div>
+            <h3 class="text-xl font-bold text-orange-900">Đỗ Ngọc Ánh</h3>
+            <p class="bg-rose-100 text-rose-600 text-xs px-3 py-1 rounded-full font-bold my-2">"Ban cán sự Toán"</p>
+            
+            <div class="text-sm text-slate-600 space-y-2 text-left w-full border-t border-orange-50 pt-4 mt-2">
+                <p><i class="fa-solid fa-cake-candles text-orange-400 mr-2"></i> <b>Ngày sinh:</b> 15/03/2008</p> 
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm mạnh:</b>Giỏi toán, vui vẻ, hòa đồng</p>
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm yếu:</b> Lên sửa bài nhưng ko dám gọi các bạn lên bảng </p>
+            </div>
+        </div>
+        <div class="member-card bg-white rounded-3xl p-6 shadow-md border border-orange-100 flex flex-col items-center text-center">
+            <div class="w-28 h-28 rounded-full overflow-hidden mb-4 border-4 border-orange-50 shadow-inner">
+                <img src="dieu.jpg" alt="Nhung" class="w-full h-full object-cover">
+            </div>
+            <h3 class="text-xl font-bold text-orange-900">Nguyễn Hoàng Diệu </h3>
+            <p class="bg-rose-100 text-rose-600 text-xs px-3 py-1 rounded-full font-bold my-2">"Chuyên Sử D3"</p>
+            <div class="text-sm text-slate-600 space-y-2 text-left w-full border-t border-orange-50 pt-4 mt-2">
+                <p><i class="fa-solid fa-cake-candles text-orange-400 mr-2"></i> <b>Ngày sinh:</b> 07/07/2008</p> 
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm mạnh:</b>Đạt nhiều giải học sinh giỏi Sử</p>
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm yếu:</b> Yêu Sử nhưng ghét giày dép, auto chân đất</p>
+            </div>
+        </div>
+        <div class="member-card bg-white rounded-3xl p-6 shadow-md border border-orange-100 flex flex-col items-center text-center">
+            <div class="w-28 h-28 rounded-full overflow-hidden mb-4 border-4 border-orange-50 shadow-inner">
+                <img src="giang.jpg" alt="Nhung" class="w-full h-full object-cover">
+            </div>
+            <h3 class="text-xl font-bold text-orange-900">Bùi Lê Giang</h3>
+            <p class="bg-rose-100 text-rose-600 text-xs px-3 py-1 rounded-full font-bold my-2">"Masker D3"</p>
+            
+            <div class="text-sm text-slate-600 space-y-2 text-left w-full border-t border-orange-50 pt-4 mt-2">
+                <p><i class="fa-solid fa-cake-candles text-orange-400 mr-2"></i> <b>Ngày sinh:</b> 18/04/2008</p> 
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm mạnh:</b> Hòa đồng, thân thiện, biết giữ sức khỏe khi đeo khẩu trang mỗi ngày</p>
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm yếu:</b> Giữ sức khỏe quá đôi khó nó cũng phản ấy...</p>
+            </div>
+        </div>
+        <div class="member-card bg-white rounded-3xl p-6 shadow-md border border-orange-100 flex flex-col items-center text-center">
+            <div class="w-28 h-28 rounded-full overflow-hidden mb-4 border-4 border-orange-50 shadow-inner">
+                <img src="han.jpg" alt="Nhung" class="w-full h-full object-cover">
+            </div>
+            <h3 class="text-xl font-bold text-orange-900">Nguyễn Đình Khả Hân</h3>
+            <p class="bg-rose-100 text-rose-600 text-xs px-3 py-1 rounded-full font-bold my-2">"Con má Lệ"</p>
+            
+            <div class="text-sm text-slate-600 space-y-2 text-left w-full border-t border-orange-50 pt-4 mt-2">
+                <p><i class="fa-solid fa-cake-candles text-orange-400 mr-2"></i> <b>Ngày sinh:</b> 05/12/2008</p> 
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm mạnh:</b> Hòa đồng, thân thiện, chất chơi người dơi</p>
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm yếu:</b>Không sì tin bằng má Lệ</p>
+            </div>
+        </div>
+        <div class="member-card bg-white rounded-3xl p-6 shadow-md border border-orange-100 flex flex-col items-center text-center">
+            <div class="w-28 h-28 rounded-full overflow-hidden mb-4 border-4 border-orange-50 shadow-inner">
+                <img src="honghoa.jpg" alt="Nhung" class="w-full h-full object-cover">
+            </div>
+            <h3 class="text-xl font-bold text-orange-900">Đinh Nguyễn Hồng Hoa</h3>
+            <p class="bg-rose-100 text-rose-600 text-xs px-3 py-1 rounded-full font-bold my-2">"Học bá D3"</p>
+            
+            <div class="text-sm text-slate-600 space-y-2 text-left w-full border-t border-orange-50 pt-4 mt-2">
+                <p><i class="fa-solid fa-cake-candles text-orange-400 mr-2"></i> <b>Ngày sinh:</b> 16/11/2008</p> 
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm mạnh:</b> Con nhà người ta, gái nhà lành</p>
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm yếu:</b> (Hiện chưa điều tra ra...)</p>
+            </div>
+        </div>
+        <div class="member-card bg-white rounded-3xl p-6 shadow-md border border-orange-100 flex flex-col items-center text-center">
+            <div class="w-28 h-28 rounded-full overflow-hidden mb-4 border-4 border-orange-50 shadow-inner">
+                <img src="huyen.jpg" alt="Nhung" class="w-full h-full object-cover">
+            </div>
+            <h3 class="text-xl font-bold text-orange-900">Hà Thanh Huyền</h3>
+            <p class="bg-rose-100 text-rose-600 text-xs px-3 py-1 rounded-full font-bold my-2">"Singer D3"</p>
+            
+            <div class="text-sm text-slate-600 space-y-2 text-left w-full border-t border-orange-50 pt-4 mt-2">
+                <p><i class="fa-solid fa-cake-candles text-orange-400 mr-2"></i> <b>Ngày sinh:</b> 29/01/2008</p> 
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm mạnh:</b> Vui vẻ, hòa đồng, hát hay, quan họ nhạc trẻ cân hết</p>
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm yếu:</b> Bé chích chòe hay "mang ớt đi học" -Trì Đặng</p>
+            </div>
+        </div>
+        <div class="member-card bg-white rounded-3xl p-6 shadow-md border border-orange-100 flex flex-col items-center text-center">
+            <div class="w-28 h-28 rounded-full overflow-hidden mb-4 border-4 border-orange-50 shadow-inner">
+                <img src="phuonglinh.jpg" alt="Nhung" class="w-full h-full object-cover">
+            </div>
+            <h3 class="text-xl font-bold text-orange-900">Hồ Nguyễn Phương Linh</h3>
+            <p class="bg-rose-100 text-rose-600 text-xs px-3 py-1 rounded-full font-bold my-2">"hí hí hí"</p>
+            
+            <div class="text-sm text-slate-600 space-y-2 text-left w-full border-t border-orange-50 pt-4 mt-2">
+                <p><i class="fa-solid fa-cake-candles text-orange-400 mr-2"></i> <b>Ngày sinh:</b> 15/02/2008</p> 
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm mạnh:</b> Hòa đồng, thân thiện, dui dẻ, cười hí hí</p>
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm yếu:</b> "Ai biết?!"</p>
+            </div>
+        </div>
+        <div class="member-card bg-white rounded-3xl p-6 shadow-md border border-orange-100 flex flex-col items-center text-center">
+            <div class="w-28 h-28 rounded-full overflow-hidden mb-4 border-4 border-orange-50 shadow-inner">
+                <img src="khanhlinh.jpg" alt="Nhung" class="w-full h-full object-cover">
+            </div>
+            <h3 class="text-xl font-bold text-orange-900">Nguyễn Khánh Linh</h3>
+            <p class="bg-rose-100 text-rose-600 text-xs px-3 py-1 rounded-full font-bold my-2">"Van Gogh D3"</p>
+            
+            <div class="text-sm text-slate-600 space-y-2 text-left w-full border-t border-orange-50 pt-4 mt-2">
+                <p><i class="fa-solid fa-cake-candles text-orange-400 mr-2"></i> <b>Ngày sinh:</b> 08/02/2008</p> 
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm mạnh:</b>Thân thiệng, hòa đồng, và thần đồng 20 hoa tay, vẽ như Van Gogh</p>
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm yếu:</b> Em ngại số 2 không ai ngại số 1, "hì hì"</p>
+            </div>
+        </div>
+        <div class="member-card bg-white rounded-3xl p-6 shadow-md border border-orange-100 flex flex-col items-center text-center">
+            <div class="w-28 h-28 rounded-full overflow-hidden mb-4 border-4 border-orange-50 shadow-inner">
+                <img src="hlinh.jpg" alt="Nhung" class="w-full h-full object-cover">
+            </div>
+            <h3 class="text-xl font-bold text-orange-900">Trần Nguyễn Hoài Linh</h3>
+            <p class="bg-rose-100 text-rose-600 text-xs px-3 py-1 rounded-full font-bold my-2">"Trần Nguyễn Hoài Lâm"</p>
+            
+            <div class="text-sm text-slate-600 space-y-2 text-left w-full border-t border-orange-50 pt-4 mt-2">
+                <p><i class="fa-solid fa-cake-candles text-orange-400 mr-2"></i> <b>Ngày sinh:</b> 28/02/2008</p> 
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm mạnh:</b> Xinh gái, giọng hay, gái nhà lành</p>
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm yếu:</b> Lành quá sợ ngta bắt nạt</p>
+            </div>
+        </div>
+        <div class="member-card bg-white rounded-3xl p-6 shadow-md border border-orange-100 flex flex-col items-center text-center">
+            <div class="w-28 h-28 rounded-full overflow-hidden mb-4 border-4 border-orange-50 shadow-inner">
+                <img src="xuanmai.jpg" alt="Nhung" class="w-full h-full object-cover">
+            </div>
+            <h3 class="text-xl font-bold text-orange-900">Nguyễn Xuân Mai</h3>
+            <p class="bg-rose-100 text-rose-600 text-xs px-3 py-1 rounded-full font-bold my-2">"Xuân Mốt (Picasso D3)"</p>
+            
+            <div class="text-sm text-slate-600 space-y-2 text-left w-full border-t border-orange-50 pt-4 mt-2">
+                <p><i class="fa-solid fa-cake-candles text-orange-400 mr-2"></i> <b>Ngày sinh:</b> 11/01/2008</p> 
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm mạnh:</b> Họa sĩ, designer, stylist, nhà thiết kế học</p>
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm yếu:</b> Có "võ" mà nhỏ</p>
+            </div>
+        </div>
+        <div class="member-card bg-white rounded-3xl p-6 shadow-md border border-orange-100 flex flex-col items-center text-center">
+            <div class="w-28 h-28 rounded-full overflow-hidden mb-4 border-4 border-orange-50 shadow-inner">
+                <img src="thaomy.jpg" alt="Nhung" class="w-full h-full object-cover slide-bottom">
+            </div>
+            <h3 class="text-xl font-bold text-orange-900">Nguyễn Thảo My</h3>
+            <p class="bg-rose-100 text-rose-600 text-xs px-3 py-1 rounded-full font-bold my-2">"Ronaldo bóng ném"</p>
+            
+            <div class="text-sm text-slate-600 space-y-2 text-left w-full border-t border-orange-50 pt-4 mt-2">
+                <p><i class="fa-solid fa-cake-candles text-orange-400 mr-2"></i> <b>Ngày sinh:</b> 28/09/2008</p> 
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm mạnh:</b> Giỏi thể thao, giỏi cả học tập</p>
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm yếu:</b> Giống Ronaldo khi đá WC luôn, vẫn chưa vô địch bóng ném năm nào</p>
+            </div>
+        </div>
+        <div class="member-card bg-white rounded-3xl p-6 shadow-md border border-orange-100 flex flex-col items-center text-center">
+            <div class="w-28 h-28 rounded-full overflow-hidden mb-4 border-4 border-orange-50 shadow-inner">
+                <img src="tuyetmy.jpg" alt="Nhung" class="w-full h-full object-cover">
+            </div>
+            <h3 class="text-xl font-bold text-orange-900">Trần Tuyết My</h3>
+            <p class="bg-rose-100 text-rose-600 text-xs px-3 py-1 rounded-full font-bold my-2">"Chuyên Địa D3"</p>
+            
+            <div class="text-sm text-slate-600 space-y-2 text-left w-full border-t border-orange-50 pt-4 mt-2">
+                <p><i class="fa-solid fa-cake-candles text-orange-400 mr-2"></i> <b>Ngày sinh:</b> 01/01/2008</p> 
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm mạnh:</b> Học giỏi Địa, giỏi đồng đều, quê miềng Tây</p>
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm yếu:</b> Nhiều lúc cũng loi choi loe choe</p>
+            </div>
+        </div>
+        <div class="member-card bg-white rounded-3xl p-6 shadow-md border border-orange-100 flex flex-col items-center text-center">
+            <div class="w-28 h-28 rounded-full overflow-hidden mb-4 border-4 border-orange-50 shadow-inner">
+                <img src="anna.jpg" alt="Nhung" class="w-full h-full object-cover">
+            </div>
+            <h3 class="text-xl font-bold text-orange-900">Nguyễn An Na</h3>
+            <p class="bg-rose-100 text-rose-600 text-xs px-3 py-1 rounded-full font-bold my-2">"Hung thần máy tính cầm tay"</p>
+            
+            <div class="text-sm text-slate-600 space-y-2 text-left w-full border-t border-orange-50 pt-4 mt-2">
+                <p><i class="fa-solid fa-cake-candles text-orange-400 mr-2"></i> <b>Ngày sinh:</b> 18/02/2008</p> 
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm mạnh:</b> Nhỏ mà có võ, dui dẻ, thân thiện</p>
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm yếu:</b> Nhà cái chuyên gia làm cả lớp hồi hộp đau tim</p>
+            </div>
+        </div>
+        <div class="member-card bg-white rounded-3xl p-6 shadow-md border border-orange-100 flex flex-col items-center text-center">
+            <div class="w-28 h-28 rounded-full overflow-hidden mb-4 border-4 border-orange-50 shadow-inner">
+                <img src="ngan.jpg" alt="Nhung" class="w-full h-full object-cover">
+            </div>
+            <h3 class="text-xl font-bold text-orange-900">Phạm Trương Thu Ngân</h3>
+            <p class="bg-rose-100 text-rose-600 text-xs px-3 py-1 rounded-full font-bold my-2">"Một đấm là say đắm"</p>
+            
+            <div class="text-sm text-slate-600 space-y-2 text-left w-full border-t border-orange-50 pt-4 mt-2">
+                <p><i class="fa-solid fa-cake-candles text-orange-400 mr-2"></i> <b>Ngày sinh:</b> 17/01/2008</p> 
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm mạnh:</b> Hòa đồng, dui dẻ, giỏi võ, hai đấm là đắm say</p>
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm yếu:</b> Nhiều lúc tếu tếu, bage</p>
+            </div>
+        </div>
+        <div class="member-card bg-white rounded-3xl p-6 shadow-md border border-orange-100 flex flex-col items-center text-center">
+            <div class="w-28 h-28 rounded-full overflow-hidden mb-4 border-4 border-orange-50 shadow-inner">
+                <img src="anngoc.jpg" alt="Nhung" class="w-full h-full object-cover">
+            </div>
+            <h3 class="text-xl font-bold text-orange-900">Đào An Ngọc</h3>
+            <p class="bg-rose-100 text-rose-600 text-xs px-3 py-1 rounded-full font-bold my-2">"Professional MC D3"</p>
+            
+            <div class="text-sm text-slate-600 space-y-2 text-left w-full border-t border-orange-50 pt-4 mt-2">
+                <p><i class="fa-solid fa-cake-candles text-orange-400 mr-2"></i> <b>Ngày sinh:</b> 27/02/2008</p> 
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm mạnh:</b> Tự tin, hoạt bát, thân thiện, giọng đọc hay, truyền cảm</p>
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm yếu:</b> Vẫn còn tếu tếu, bage bage</p>
+            </div>
+        </div>
+        <div class="member-card bg-white rounded-3xl p-6 shadow-md border border-orange-100 flex flex-col items-center text-center">
+            <div class="w-28 h-28 rounded-full overflow-hidden mb-4 border-4 border-orange-50 shadow-inner">
+                <img src="bngoc.jpg" alt="Nhung" class="w-full h-full object-cover">
+            </div>
+            <h3 class="text-xl font-bold text-orange-900">Nguyễn Hoàng Bảo Ngọc</h3>
+            <p class="bg-rose-100 text-rose-600 text-xs px-3 py-1 rounded-full font-bold my-2">"Leader dancer D3"</p>
+            
+            <div class="text-sm text-slate-600 space-y-2 text-left w-full border-t border-orange-50 pt-4 mt-2">
+                <p><i class="fa-solid fa-cake-candles text-orange-400 mr-2"></i> <b>Ngày sinh:</b> 10/01/2008</p> 
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm mạnh:</b> Hoạt bát, năng động, gang gang, nhảy chiến ác</p>
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm yếu:</b>Gang gang quá nhiều khi hấp hấp mà ko biết</p>
+            </div>
+        </div>
+        <div class="member-card bg-white rounded-3xl p-6 shadow-md border border-orange-100 flex flex-col items-center text-center">
+            <div class="w-28 h-28 rounded-full overflow-hidden mb-4 border-4 border-orange-50 shadow-inner">
+                <img src="mainguyen.jpg" alt="Nhung" class="w-full h-full object-cover">
+            </div>
+            <h3 class="text-xl font-bold text-orange-900">Mai Thị Thảo Nguyên</h3>
+            <p class="bg-rose-100 text-rose-600 text-xs px-3 py-1 rounded-full font-bold my-2">"Bộ trưởng bộ công an tương lai"</p>
+            
+            <div class="text-sm text-slate-600 space-y-2 text-left w-full border-t border-orange-50 pt-4 mt-2">
+                <p><i class="fa-solid fa-cake-candles text-orange-400 mr-2"></i> <b>Ngày sinh:</b> 03/01/2008</p> 
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm mạnh:</b> Huy chương bạc Olympic Văn 30/4 (má nghe ngầu đét)</p>
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm yếu:</b> Đi giải lớn thì lụm còn múc giải nhỏ thì nhòe</p>
+            </div>
+        </div>
+        <div class="member-card bg-white rounded-3xl p-6 shadow-md border border-orange-100 flex flex-col items-center text-center">
+            <div class="w-28 h-28 rounded-full overflow-hidden mb-4 border-4 border-orange-50 shadow-inner">
+                <img src="nguyet.jpg" alt="Nhung" class="w-full h-full object-cover slide-bottom">
+            </div>
+            <h3 class="text-xl font-bold text-orange-900">Đào Ánh Nguyệt</h3>
+            <p class="bg-rose-100 text-rose-600 text-xs px-3 py-1 rounded-full font-bold my-2">"Lớp phó ghi điểm dơ tay"</p>
+            
+            <div class="text-sm text-slate-600 space-y-2 text-left w-full border-t border-orange-50 pt-4 mt-2">
+                <p><i class="fa-solid fa-cake-candles text-orange-400 mr-2"></i> <b>Ngày sinh:</b> 24/03/2008</p> 
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm mạnh:</b> Làm việc nghiêm túc, vui vẻ hòa đồng</p>
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm yếu:</b> Nghiêm túc quá cái nhiều khi cũng khá stress...</p>
+            </div>
+        </div>
+        <div class="member-card bg-white rounded-3xl p-6 shadow-md border border-orange-100 flex flex-col items-center text-center">
+            <div class="w-28 h-28 rounded-full overflow-hidden mb-4 border-4 border-orange-50 shadow-inner">
+                <img src="nhi.jpg" alt="Nhung" class="w-full h-full object-cover">
+            </div>
+            <h3 class="text-xl font-bold text-orange-900">Lê Uyên Nhi</h3>
+            <p class="bg-rose-100 text-rose-600 text-xs px-3 py-1 rounded-full font-bold my-2">"Outside hiền hiền but dancer gang gang"</p>
+            
+            <div class="text-sm text-slate-600 space-y-2 text-left w-full border-t border-orange-50 pt-4 mt-2">
+                <p><i class="fa-solid fa-cake-candles text-orange-400 mr-2"></i> <b>Ngày sinh:</b> 15/11/2008</p> 
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm mạnh:</b> Thân thiện, hòa đồng, trông đụt đụt mà nhảy giỏi phết </p>
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm yếu:</b>Xinh gái mà ít ảnh quá, thành ra p lấy ảnh con chó trên acc fb </p>
+            </div>
+        </div>
+        <div class="member-card bg-white rounded-3xl p-6 shadow-md border border-orange-100 flex flex-col items-center text-center">
+            <div class="w-28 h-28 rounded-full overflow-hidden mb-4 border-4 border-orange-50 shadow-inner">
+                <img src="nhu.jpg" alt="Nhung" class="w-full h-full object-cover">
+            </div>
+            <h3 class="text-xl font-bold text-orange-900">Đỗ Hoàng Ánh Như</h3>
+            <p class="bg-rose-100 text-rose-600 text-xs px-3 py-1 rounded-full font-bold my-2">"há há há"</p>
+            
+            <div class="text-sm text-slate-600 space-y-2 text-left w-full border-t border-orange-50 pt-4 mt-2">
+                <p><i class="fa-solid fa-cake-candles text-orange-400 mr-2"></i> <b>Ngày sinh:</b> 23/10/2008</p> 
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm mạnh:</b> Vui tính, hòa đồng, có nụ cười "há há há" rất truyền cảm, làm người khác cười theo</p>
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm yếu:</b> "Yassssss"</p>
+            </div>
+        </div>
+        <div class="member-card bg-white rounded-3xl p-6 shadow-md border border-orange-100 flex flex-col items-center text-center">
+            <div class="w-28 h-28 rounded-full overflow-hidden mb-4 border-4 border-orange-50 shadow-inner">
+                <img src="maiphuong.jpg" alt="Nhung" class="w-full h-full object-cover">
+            </div>
+            <h3 class="text-xl font-bold text-orange-900">Hoàng Mai Phương</h3>
+            <p class="bg-rose-100 text-rose-600 text-xs px-3 py-1 rounded-full font-bold my-2">"Professional Gymer"</p>
+            
+            <div class="text-sm text-slate-600 space-y-2 text-left w-full border-t border-orange-50 pt-4 mt-2">
+                <p><i class="fa-solid fa-cake-candles text-orange-400 mr-2"></i> <b>Ngày sinh:</b> 09/01/2008</p> 
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm mạnh:</b> Hòa đồng, body build cứng top 1 D3</p>
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm yếu:</b>Tự tin nhưng hay ngại</p>
+            </div>
+        </div>
+        <div class="member-card bg-white rounded-3xl p-6 shadow-md border border-orange-100 flex flex-col items-center text-center">
+            <div class="w-28 h-28 rounded-full overflow-hidden mb-4 border-4 border-orange-50 shadow-inner">
+                <img src="bthao.jpg" alt="Nhung" class="w-full h-full object-cover">
+            </div>
+            <h3 class="text-xl font-bold text-orange-900">Bùi Lê Thanh Thảo</h3>
+            <p class="bg-rose-100 text-rose-600 text-xs px-3 py-1 rounded-full font-bold my-2">"Học bá ẩn dật"</p>
+            
+            <div class="text-sm text-slate-600 space-y-2 text-left w-full border-t border-orange-50 pt-4 mt-2">
+                <p><i class="fa-solid fa-cake-candles text-orange-400 mr-2"></i> <b>Ngày sinh:</b> 28/01/2008</p> 
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm mạnh:</b> Vui vẻ, thâng thiệng, học giỏi</p>
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm yếu:</b> Dui tính mà ích nói</p>
+            </div>
+        </div>
+        <div class="member-card bg-white rounded-3xl p-6 shadow-md border border-orange-100 flex flex-col items-center text-center">
+            <div class="w-28 h-28 rounded-full overflow-hidden mb-4 border-4 border-orange-50 shadow-inner">
+                <img src="phuongthao.jpg" alt="Nhung" class="w-full h-full object-cover">
+            </div>
+            <h3 class="text-xl font-bold text-orange-900">Nguyễn Ngọc Phương Thảo</h3>
+            <p class="bg-rose-100 text-rose-600 text-xs px-3 py-1 rounded-full font-bold my-2">"Tổ trưởng này lanh"</p>
+            
+            <div class="text-sm text-slate-600 space-y-2 text-left w-full border-t border-orange-50 pt-4 mt-2">
+                <p><i class="fa-solid fa-cake-candles text-orange-400 mr-2"></i> <b>Ngày sinh:</b> 11/08/2008</p> 
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm mạnh:</b> Thân thiện, hòa đồng, tổ trưởng nên thành ra cũng khôn lỏi phết</p>
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm yếu:</b> Nhiều lúc nhây nhây bage</p>
+            </div>
+        </div>
+        <div class="member-card bg-white rounded-3xl p-6 shadow-md border border-orange-100 flex flex-col items-center text-center">
+            <div class="w-28 h-28 rounded-full overflow-hidden mb-4 border-4 border-orange-50 shadow-inner">
+                <img src="thu.jpg" alt="Nhung" class="w-full h-full object-cover">
+            </div>
+            <h3 class="text-xl font-bold text-orange-900">Lại Anh Thư</h3>
+            <p class="bg-rose-100 text-rose-600 text-xs px-3 py-1 rounded-full font-bold my-2">"Again brother letter"</p>
+            
+            <div class="text-sm text-slate-600 space-y-2 text-left w-full border-t border-orange-50 pt-4 mt-2">
+                <p><i class="fa-solid fa-cake-candles text-orange-400 mr-2"></i> <b>Ngày sinh:</b> 24/03/2008</p> 
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm mạnh:</b> Vui tính, hòa đồng, luôn đứng lên bảo vệ bạn bè</p>
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm yếu:</b> Quý mến bạn bè nên nhiều lúc nàng hơi nóng tính</p>
+            </div>
+        </div>
+        <div class="member-card bg-white rounded-3xl p-6 shadow-md border border-orange-100 flex flex-col items-center text-center">
+            <div class="w-28 h-28 rounded-full overflow-hidden mb-4 border-4 border-orange-50 shadow-inner">
+                <img src="thy.jpg" alt="Nhung" class="w-full h-full object-cover">
+            </div>
+            <h3 class="text-xl font-bold text-orange-900">Phạm Nguyễn Việt Thy</h3>
+            <p class="bg-rose-100 text-rose-600 text-xs px-3 py-1 rounded-full font-bold my-2">"Vietnamese Competition"</p>
+            
+            <div class="text-sm text-slate-600 space-y-2 text-left w-full border-t border-orange-50 pt-4 mt-2">
+                <p><i class="fa-solid fa-cake-candles text-orange-400 mr-2"></i> <b>Ngày sinh:</b> 15/03/2008</p> 
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm mạnh:</b> Dui dẻ, hòa đồng, hay cười</p>
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm yếu:</b> Hay cọc</p>
+            </div>
+        </div>
+        <div class="member-card bg-white rounded-3xl p-6 shadow-md border border-orange-100 flex flex-col items-center text-center">
+            <div class="w-28 h-28 rounded-full overflow-hidden mb-4 border-4 border-orange-50 shadow-inner">
+                <img src="truc.jpg" alt="Nhung" class="w-full h-full object-cover">
+            </div>
+            <h3 class="text-xl font-bold text-orange-900">Trần Đặng Thanh Trúc</h3>
+            <p class="bg-rose-100 text-rose-600 text-xs px-3 py-1 rounded-full font-bold my-2">"Lớp phó lao động"</p>
+            
+            <div class="text-sm text-slate-600 space-y-2 text-left w-full border-t border-orange-50 pt-4 mt-2">
+                <p><i class="fa-solid fa-cake-candles text-orange-400 mr-2"></i> <b>Ngày sinh:</b> 14/10/2008</p> 
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm mạnh:</b> Trách nhiệm, thân thiện, hòa đồng</p>
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm yếu:</b> Check bụi lớp phải gọi là hơn các mẹ</p>
+            </div>
+        </div>
+        <div class="member-card bg-white rounded-3xl p-6 shadow-md border border-orange-100 flex flex-col items-center text-center">
+            <div class="w-28 h-28 rounded-full overflow-hidden mb-4 border-4 border-orange-50 shadow-inner">
+                <img src="vinh.png" alt="Nhung" class="w-full h-full object-cover">
+            </div>
+            <h3 class="text-xl font-bold text-orange-900">Nguyễn Mai Ngọc Vinh</h3>
+            <p class="bg-rose-100 text-rose-600 text-xs px-3 py-1 rounded-full font-bold my-2">"Ai ta đa ki mớt sừ, Wa ta si wa Vinh đẹt sừ"</p>
+            
+            <div class="text-sm text-slate-600 space-y-2 text-left w-full border-t border-orange-50 pt-4 mt-2">
+                <p><i class="fa-solid fa-cake-candles text-orange-400 mr-2"></i> <b>Ngày sinh:</b> 18/01/2008</p> 
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm mạnh:</b> Hiền lành, thân thiện, tiếng Nhật N5</p>
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm yếu:</b> Hiền nhưng mà coi chừng hiền quá gặp phiền</p>
+            </div>
+        </div>
+        <div class="member-card bg-white rounded-3xl p-6 shadow-md border border-orange-100 flex flex-col items-center text-center">
+            <div class="w-28 h-28 rounded-full overflow-hidden mb-4 border-4 border-orange-50 shadow-inner">
+                <img src="duc.jpg" alt="Nhung" class="w-full h-full object-cover">
+            </div>
+            <h3 class="text-xl font-bold text-orange-900">Nguyễn Lê Đức</h3>
+            <p class="bg-rose-100 text-rose-600 text-xs px-3 py-1 rounded-full font-bold my-2">"Lớp phó học tập"</p>
+            
+            <div class="text-sm text-slate-600 space-y-2 text-left w-full border-t border-orange-50 pt-4 mt-2">
+                <p><i class="fa-solid fa-cake-candles text-orange-400 mr-2"></i> <b>Ngày sinh:</b> 03/04/2008</p> 
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm mạnh:</b> Hòa đồng, thân thiện, lâu lâu tếu</p>
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm yếu:</b> Lâu lâu tếu thì cô Trang bảo khờ</p>
+            </div>
+        </div>
+        <div class="member-card bg-white rounded-3xl p-6 shadow-md border border-orange-100 flex flex-col items-center text-center">
+            <div class="w-28 h-28 rounded-full overflow-hidden mb-4 border-4 border-orange-50 shadow-inner">
+                <img src="minh.jpg" alt="Nhung" class="w-full h-full object-cover">
+            </div>
+            <h3 class="text-xl font-bold text-orange-900">Trần Nguyễn Phước Minh</h3>
+            <p class="bg-rose-100 text-rose-600 text-xs px-3 py-1 rounded-full font-bold my-2">"Nhà xã hội học"</p>
+            
+            <div class="text-sm text-slate-600 space-y-2 text-left w-full border-t border-orange-50 pt-4 mt-2">
+                <p><i class="fa-solid fa-cake-candles text-orange-400 mr-2"></i> <b>Ngày sinh:</b> 02/01/2008</p> 
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm mạnh:</b> Vẻ ngoài nonchalant nhưng bên trong thì cũng hòa đồng, thân thiện, tuổi 18 nhưng triết lý tuổi 50</p>
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm yếu:</b> Bên trong thân thiện nhưng vẻ ngoài nonchalant</p>
+            </div>
+        </div>
+        <div class="member-card bg-white rounded-3xl p-6 shadow-md border border-orange-100 flex flex-col items-center text-center">
+            <div class="w-28 h-28 rounded-full overflow-hidden mb-4 border-4 border-orange-50 shadow-inner">
+                <img src="chit.jpg" alt="Nhung" class="w-full h-full object-cover">
+            </div>
+            <h3 class="text-xl font-bold text-orange-900">Ma Minh Quang</h3>
+            <p class="bg-rose-100 text-rose-600 text-xs px-3 py-1 rounded-full font-bold my-2">"Chưa Tày đâuu!"</p>
+            
+            <div class="text-sm text-slate-600 space-y-2 text-left w-full border-t border-orange-50 pt-4 mt-2">
+                <p><i class="fa-solid fa-cake-candles text-orange-400 mr-2"></i> <b>Ngày sinh:</b> 30/07/2008</p> 
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm mạnh:</b> Thân thiện, hòa đồng, hài hài, tếu tếu</p>
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm yếu:</b>Giọng trầm quãng 8</p>
+            </div>
+        </div>
+        <div class="member-card bg-white rounded-3xl p-6 shadow-md border border-orange-100 flex flex-col items-center text-center">
+            <div class="w-28 h-28 rounded-full overflow-hidden mb-4 border-4 border-orange-50 shadow-inner">
+                <img src="huy.jpg" alt="Nhung" class="w-full h-full object-cover">
+            </div>
+            <h3 class="text-xl font-bold text-orange-900">Vũ Đức Huy</h3>
+            <p class="bg-rose-100 text-rose-600 text-xs px-3 py-1 rounded-full font-bold my-2">"Boy hướng tùm lum"</p>
+            
+            <div class="text-sm text-slate-600 space-y-2 text-left w-full border-t border-orange-50 pt-4 mt-2">
+                <p><i class="fa-solid fa-cake-candles text-orange-400 mr-2"></i> <b>Ngày sinh:</b> 08/11/2008</p> 
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm mạnh:</b> Vui tính, hòa đồng, fan Kimmich</p>
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm yếu:</b> Fan Bayern Munich</p>
+            </div>
+        </div>
+        <div class="member-card bg-white rounded-3xl p-6 shadow-md border border-orange-100 flex flex-col items-center text-center">
+            <div class="w-28 h-28 rounded-full overflow-hidden mb-4 border-4 border-orange-50 shadow-inner">
+                <img src="toan.jpg" alt="Nhung" class="w-full h-full object-cover slide-bottom">
+            </div>
+            <h3 class="text-xl font-bold text-orange-900">Nguyễn Tự Bảo Toàn</h3>
+            <p class="bg-rose-100 text-rose-600 text-xs px-3 py-1 rounded-full font-bold my-2">"Ban chuyên môn clb Cầu lông"</p>
+            
+            <div class="text-sm text-slate-600 space-y-2 text-left w-full border-t border-orange-50 pt-4 mt-2">
+                <p><i class="fa-solid fa-cake-candles text-orange-400 mr-2"></i> <b>Ngày sinh:</b> 21/04/2008</p> 
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm mạnh:</b> Vui tính, thân thiện, đánh cầu lông hay</p>
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm yếu:</b> Râu hơi nhiều</p>
+            </div>
+        </div>
+        <div class="member-card bg-white rounded-3xl p-6 shadow-md border border-orange-100 flex flex-col items-center text-center">
+            <div class="w-28 h-28 rounded-full overflow-hidden mb-4 border-4 border-orange-50 shadow-inner">
+                <img src="hieu.jpg" alt="Nhung" class="w-full h-full object-cover">
+            </div>
+            <h3 class="text-xl font-bold text-orange-900">Phan Hữu Minh Hiếu</h3>
+            <p class="bg-rose-100 text-rose-600 text-xs px-3 py-1 rounded-full font-bold my-2">"Thủ thành số 1 trong khung gỗ"</p>
+            
+            <div class="text-sm text-slate-600 space-y-2 text-left w-full border-t border-orange-50 pt-4 mt-2">
+                <p><i class="fa-solid fa-cake-candles text-orange-400 mr-2"></i> <b>Ngày sinh:</b> 02/12/2008</p> 
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm mạnh:</b> Vui tính, hòa đồng, thân thiện, bắt bóng hay</p>
+                <p><i class="fa-solid fa-bolt text-orange-400 mr-2"></i> <b>Điểm yếu:</b> Mê bắt bóng quá, chơi bóng chuyền cũng làm thủ môn</p>
+            </div>
+        </div>
+
+        </div>
+
+</body>
+</html>
