@@ -30,13 +30,22 @@
     </style>
 
     <script>
-    var password = "D3VungTau23-26"; 
-    var userPass = prompt("Chào mừng bạn đến với D3 Vũng Tàu! Vui lòng nhập mật mã để vào:");
+    // 1. Kiểm tra xem người dùng đã đăng nhập thành công trước đó chưa
+    if (sessionStorage.getItem('isLoggedIn') !== 'true') {
+        var password = "D3VungTau23-26"; // Mật khẩu của bạn
+        var userPass = prompt("Chào mừng bạn đến với D3 Vũng Tàu! Vui lòng nhập mật mã để vào:");
 
-    if (userPass !== password) {
-        alert("Sai mật mã rồi bạn ơi! Hẹn gặp lại nhé.");
-        window.location.href = "about:blank"; 
+        if (userPass === password) {
+            // 2. Nếu đúng, lưu trạng thái "đã đăng nhập" vào bộ nhớ tạm
+            sessionStorage.setItem('isLoggedIn', 'true');
+            alert("Mật mã chính xác! Chào mừng bạn.");
+        } else {
+            // 3. Nếu sai, đẩy ra trang trắng
+            alert("Sai mật mã rồi bạn ơi! Hẹn gặp lại nhé.");
+            window.location.href = "about:blank";
+        }
     }
+    // Nếu đã có 'isLoggedIn' là 'true', code sẽ bỏ qua phần hỏi mật khẩu này.
 </script>
 
 </head>
@@ -92,4 +101,5 @@
     </script>
 </body>
 </html>
+
 
